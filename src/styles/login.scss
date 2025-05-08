@@ -1,0 +1,159 @@
+@use './abstracts/colours';
+
+.signin-page {
+  position: relative;
+
+  .signin-logo {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      color: #8c56c6;
+      z-index: 10;
+      font-size: 1.7rem;
+      font-weight: bold;
+  }
+}
+ 
+.signin-container {
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 100vh;
+
+  .signin-image-container {
+    flex: 1 1 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f6f6f6;
+
+    .signin-image {
+      max-width: 90%;
+      height: auto;
+      border-radius: 12px;
+    }
+  }
+
+  .signin-form-container {
+    flex: 1 1 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    padding: 20px;
+
+    .signin-paper {
+      width: 100%;
+      max-width: 500px;
+      border: none;
+      padding: 30px;
+      border-radius: 12px;
+    }
+
+    .signin-welcome-text {
+      font-size: 1.5rem;
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 15px;
+      color: #333;
+    }
+
+    .signin-subtext {
+      font-size: 0.90rem;
+      text-align: center;
+      margin-bottom: 25px;
+      color: #555;
+    }
+
+    .signin-form {
+      display: flex;
+      flex-direction: column;
+
+      .error-message{
+        color: red;
+        font-size: 14px;
+        font-weight: 400;
+      }
+
+      .mantine-TextInput-wrapper,
+      .mantine-PasswordInput-wrapper {
+        margin-bottom: 20px; 
+        
+      }
+
+      .mantine-TextInput,
+      .mantine-PasswordInput {
+        input {
+          border-radius: 10px;
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+          transition: box-shadow 0.3s ease;
+         
+        }
+        input:focus {
+          box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+          border-color: #8c56c6;
+        }
+      }
+
+      .signin-button {
+        width: 100%;
+        background-color: #8c56c6;
+        color: white;
+        font-size: 1rem;
+        padding: 12px;
+        border-radius: 8px;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+        font-weight: bold;
+
+        &:hover {
+          background-color: #6a3e9e;
+          transform: scale(1.02);
+        }
+
+        &:active {
+          transform: scale(0.98);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .signin-container {
+    flex-direction: column;
+
+    .signin-image-container {
+      flex: 1 1 auto;
+      padding: 20px;
+
+      .signin-image {
+        max-width: 100%;
+      }
+    }
+
+    .hide-on-small {
+      display: none;
+    }
+
+    .signin-form-container {
+      flex: 1 1 auto;
+      padding: 10px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .signin-form-container {
+    .signin-paper {
+      padding: 20px;
+    }
+
+    .signin-welcome-text {
+      font-size: 1.5rem;
+    }
+
+    .signin-subtext {
+      font-size: 0.85rem;
+    }
+  }
+}
+  

@@ -1,0 +1,141 @@
+@use './abstracts/colours';
+
+.resourceListContainer {
+  background-color: #111b52;
+  min-height: 100vh;
+  padding-bottom: 1rem;
+ 
+  .resource-list-content {
+    padding: 2rem;
+    max-width: 95%;
+    margin: 0 auto;
+    flex: 1;
+  }
+
+  .mantine-Table-root {
+    border-radius: 16px;
+    overflow: hidden;
+    background: #ffffff;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+  }
+
+  .mantine-Table-head {
+    background: linear-gradient(90deg, #6a11cb, #2575fc);
+    color: #fff;
+
+    th {
+      text-transform: uppercase;
+      font-size: 0.9rem;
+      font-weight: 600;
+      padding: 1rem;
+    }
+  }
+
+  .mantine-Table-row {
+    td {
+      padding: 1rem;
+    }
+
+    &:hover {
+      background-color: rgba(54, 23, 89, 0.1);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  .no-resources {
+    text-align: center;
+    padding: 20px;
+    color: #aaa;
+  }
+
+  .pagination {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+  }
+
+  .mantine-Button-root {
+    transition: all 0.3s ease; 
+    font-weight: 500;
+
+    &:hover {
+      background-color: #3b4684; 
+      color: #fff; 
+      border-color: #3b4684; 
+    }
+
+    &:active {
+      background-color: #3b4684; 
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    .mantine-Table-root {
+      display: block;
+      overflow-x: auto;
+      border: none;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      text-align: left;
+      padding: 0.8rem;
+      font-size: 0.875rem;
+      white-space: nowrap;
+    }
+
+    .mantine-Table-head {
+      th {
+        font-size: 0.8rem;
+      }
+    }
+
+    .mantine-Table-row {
+      display: block;
+      margin-bottom: 1rem;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+      td {
+        display: block;
+        width: 100%;
+        text-align: right;
+        padding: 0.5rem;
+        border: 1px solid #ddd;
+
+        &:first-child {
+          text-align: left;
+          font-weight: bold;
+        }
+
+        &:before {
+          content: attr(data-label);
+          font-weight: bold;
+          margin-right: 8px;
+          color: #6a11cb;
+        }
+      }
+    }
+
+    .pagination {
+      flex-wrap: wrap;
+      margin-top: 1rem;
+      justify-content: center;
+      padding-bottom: 20px;
+    }
+  }
+}
+
+.center-loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #111b52;
+}
+

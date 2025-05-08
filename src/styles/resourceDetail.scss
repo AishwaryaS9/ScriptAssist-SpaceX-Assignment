@@ -1,0 +1,110 @@
+
+@use './abstracts/colours';
+
+.sectioncontainer {
+  background-color: #361759;
+
+  .inner {
+    background-color: #361759;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+
+    .resource-card {
+      background-color: #111b52;
+      color: #ffffff;
+      border-radius: 12px;
+      flex: 1;
+    }
+
+    .first-column {
+      background-color: #111b52;
+      color: #ffffff;
+      border: 1px solid #ffffff;
+      padding: 16px;
+      border-radius: 12px;
+      flex: 1 1 30%;
+      max-width: 30%;
+      height: 100%;
+    }
+
+    .second-column {
+      background-color: #111b52;
+      color: #ffffff;
+      border: 1px solid #ffffff;
+      padding: 16px;
+      border-radius: 12px;
+      flex: 1 1 auto;
+      max-width: calc(100% - 30% - 16px);
+      overflow-y: auto;
+      height: 100%;
+
+      .view-more-button{
+        color: #ffffff;
+        font-size: clamp(0.875rem, 1vw, 1rem);
+        border: 1px solid #ffffff;
+        font-weight: 500;
+      }
+
+      .enrich-button{
+        color: #ffffff;
+        width: 50%;
+        font-size: clamp(0.875rem, 1vw, 1rem);
+        border: 1px solid #ffffff;
+        font-weight: 500;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .first-column, .second-column {
+        flex: 1 1 100%;
+        max-width: 100%;
+        height: auto;
+      }
+
+      .webcast-frame {
+        max-width: 100%;
+        width: auto;
+        height: auto;
+        aspect-ratio: 16 / 9;
+      }
+
+      .mantine-Button-root {
+        align-self: center;
+      }
+    }
+
+    .core-card {
+      background-color: #1a274e;
+      color: #ffffff;
+      padding: 1rem;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+    }
+
+    .link {
+      color: #4a90e2;
+      text-decoration: underline;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+
+    .webcast-frame {
+      border-radius: 12px;
+      max-width: 100%;
+    }
+
+    .mantine-Group-root {
+      gap: 8px !important;
+    }
+  }
+}
+
+.center-loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #111b52;
+}

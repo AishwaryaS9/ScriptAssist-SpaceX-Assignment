@@ -1,0 +1,154 @@
+@use './abstracts/colours';
+
+.sectioncontainer {
+    background-color: #361759;
+
+  .group-container {
+    background-color: #111B52;
+    height: auto; 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    border-bottom: 1px solid #FFFFFF;
+    flex-wrap: wrap; 
+  
+    .section-item {
+      padding: 12px;
+      text-align: center;
+      flex: 1 0 150px; 
+      margin-bottom: 15px; 
+  
+      .section-label {
+        color: #FFFFFF;
+        font-size: 1rem;
+      }
+  
+      .section-title {
+        text-transform: capitalize;
+        font-size: 18px;
+        color: #FFFFFF;
+      }
+    }
+  
+    @media (max-width: 768px) {
+      .section-item {
+        flex: 1 0 100%; 
+        text-align: left;
+        padding: 10px 15px;
+      }
+  
+      .section-label {
+        font-size: 0.9rem;
+      }
+  
+      .section-title {
+        font-size: 16px;
+      }
+    }
+  
+    @media (max-width: 480px) {
+      .section-item {
+        padding: 8px 12px; 
+      }
+  
+      .section-label {
+        font-size: 0.8rem; 
+      }
+  
+      .section-title {
+        font-size: 14px; 
+      }
+    }
+  }
+
+  .main-menu {
+    display: flex;
+    flex-direction: row;
+    background-color: #111B52;
+    flex-wrap: wrap;
+  
+    .content-section {
+      flex: 1;
+      padding: 1rem;
+      width: 100%;
+  
+      .content-description {
+        color: #FFFFFF;
+        text-align: justify;
+        font-size: 18px;
+      }
+  
+      .card-section {
+        padding-top: 1rem;
+        text-align: left;
+  
+        .card-sub-section {
+          padding: 1rem;
+        }
+      }
+    }
+  
+    .image-section {
+      flex: 1;
+      padding: 1rem;
+      border-left: 1px solid #FFFFFF;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      overflow-y: hidden;
+    }
+  
+    @media (max-width: 768px) {
+      flex-direction: column; 
+      .content-section {
+        width: 100%;
+        padding: 0.5rem; 
+      }
+  
+      .image-section {
+        width: 100%; 
+        padding: 0.5rem;
+        border-left: none;
+      }
+    }
+  
+    @media (max-width: 480px) {
+      .content-description {
+        font-size: 16px; 
+      }
+  
+      .card-section {
+        padding-top: 0.5rem; 
+      }
+  
+      .card-sub-section {
+        padding: 0.8rem;
+      }
+    }
+  }
+  
+  
+  .related-launches {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 800px;
+  
+  
+    .launch-head{
+      color: #FFFFFF;
+      font-weight: 500;
+    }
+  
+    .launch-row{
+      color: #f8fafc;
+      font-weight: 300;
+      font-size: 14px;
+    }
+  
+    .no-launches {
+      text-align: center;
+      color: #64748b;
+      font-size: 1rem;
+    }
+  }
+  }
