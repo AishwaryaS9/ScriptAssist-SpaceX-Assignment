@@ -71,8 +71,9 @@ This project is built with the following technologies:
 1. Clone the repository and navigate to the project folder:
 
 ```bash
-git clone <repository-url>
-cd interview
+git clone https://github.com/AishwaryaS9/ScriptAssist-SpaceX-Assignment.git
+
+cd ScriptAssist-SpaceX-Assignment-main
 ```
 
 2. Install the necessary dependencies:
@@ -321,7 +322,7 @@ interview/
 
 ## Deployed Application
 
-Check out the live version of the app here: [Space X](http://localhost:5175/)
+Check out the live version of the app here: [Space X](https://script-assist-space-x-react.vercel.app/)
 
 ## Conclusion
 
