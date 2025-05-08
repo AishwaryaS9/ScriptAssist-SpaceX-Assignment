@@ -38,7 +38,7 @@ SpaceX provides a wealth of information about rockets, launches, payloads.
 
 This project is built with the following technologies:
 
-- **React / React DOM**: For building and rendering the user interface.
+- **React JS with TypeScript / React DOM**: For building and rendering the user interface with type safety and enhanced developer experience.
 
 - **React Router**: For routing and navigation within the application.
 
